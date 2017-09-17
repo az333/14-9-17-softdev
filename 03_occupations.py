@@ -1,11 +1,18 @@
-dictionary = {} 
+import csv, random 
 
-f = open("occupations.csv", 'r')
-lines = f.read().strip("\n").strip("\r"); 
-for line in lines:
+jobs = {}
 
-    data = line.split(",")
-    print data
-   # dictionary[data[0]] = data[1];
 
-#print dictionary
+with open('occupations.csv', 'rb') as csvfile:
+    reader = csv.reader(csvfile)
+    header = next(reader)
+    for row in reader:
+        jobs[row[0]] = float(row[1])
+     
+
+def randomJob ():
+    
+    
+
+
+        
